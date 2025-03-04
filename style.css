@@ -75,10 +75,15 @@ body {
   .site-footer {
     display: flex;
     justify-content: space-between;
-    color: #999999;
+    color: #ffffff;
   }
-  button {
-    display: block;
-      margin: 20px auto
+  #btn-buy-tablets {
+    display: flex;
+    justify-content: left;
+    color: white
   }
-  
+ #count-of-tablets {
+    display: flex;
+    justify-content: end;
+    color: #ffffff; 
+ }
