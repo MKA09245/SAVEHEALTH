@@ -9,7 +9,7 @@ const arrayOfHealthWishes = [
  "Wishing you the wisdom to take care of your body and mind, and the happiness that comes from good health.",
  "May your heart stay strong, your mind clear, and your body in perfect harmony.",
  "Here’s to a life filled with good health, love, and endless opportunities for wellness.",
-]
+ ]
     
     
     document.getElementById('btn_health_wishes').addEventListener('click',() => {
@@ -19,17 +19,20 @@ const arrayOfHealthWishes = [
 
     let countOfPills = 5 
     document.getElementById("count-of-tablets").innerText = "💊".repeat (
-     countPills
+     countOfPills
     )
-    document.getElementById("btn-health-wishes").addEventListener("click",() =>{
+    document.getElementById("btn_health_wishes").addEventListener("click",() =>{
         let index = Math.floor(Math.random() * arrayOfHealthWishes.length);
         document.getElementById("p-health-wishes").innerText = 
          arrayOfHealthWishes[index];
+
+
     countOfPills --;
     console.log(countOfPills);
 
-    document.getElementById("count-of-tablets").innerText = "💊".repeat(countOfPills) + "❌"(5-countOfPills);
-    console.log("💊".repeat(countOfPills) + "❌".repeat(5-countOfPills));
+    document.getElementById("count-of-tablets").innerText = "💊".repeat(countOfPills) + "❌".repeat(5 - countOfPills);
+     console.log("💊".repeat(countOfPills) + "❌".repeat(5 - countOfPills));
+
      if (countOfPills == 0) {
         console.log("countOfPills = 0");
         document.getElementById("btn_health_wishes").style.display = "none"
