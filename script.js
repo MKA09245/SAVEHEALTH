@@ -14,7 +14,7 @@ const arrayOfHealthWishes = [
     
     document.getElementById('btn_health_wishes').addEventListener('click',() => {
         let index = Math.floor(Math.random() * arrayOfHealthWishes.length)
-        document.getElementById("health-wishes").innerText=arrayOfHealthWishes[index]
+        document.getElementById("p-health-wishes").innerText=arrayOfHealthWishes[index]
     })
 
     let countOfPills = 5 
@@ -47,7 +47,27 @@ const arrayOfHealthWishes = [
             countOfPills
         );
         document.getElementById("btn_health_wishes").style.display = "inline-block";
-    })
+    });
+    
+    let gallaryImage = 1 
+    document.getElementById("main-image").setAttribute('src',`img/gallary/${gallaryImage}.png`)
 
+    document.getElementById("right-arrow").addEventListener('click',()=>{
+        gallaryImage++
+        console.log(gallaryImage)
+        
+        if(gallaryImage == 4) gallaryImage = 1;
+ 
+
+        document.getElementById("main-image").setAttribute('src',`img/gallary/${gallaryImage}.png`)
+    });
+    document.getElementById("left-arrow").addEventListener('click',()=>{
+        gallaryImage--
+        console.log(gallaryImage)
+        
+        if(gallaryImage == 0) gallaryImage = 3;
+        
+        document.getElementById("main-image").setAttribute('src',`img/gallary/${gallaryImage}.png`)
+    });
 
     
