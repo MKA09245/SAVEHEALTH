@@ -3,8 +3,8 @@ body {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  color: #ffffff;
-  background: #000000 
+  color: #000000;
+  background: #ffffff 
 }
 
 h1 {
@@ -89,8 +89,8 @@ h2 {
   text-align: center;
 }
 #btn_health_wishes{
-  background: #ffffff;
-  color: #000000;
+  background: #000000;
+  color: #ffffff;
   border: 5px solid #ffffff;
   border-radius: 10px;
   padding: 10px 20px;
@@ -102,14 +102,14 @@ h2 {
 height: 150px;
 font-size: 28px;
 line-height: 40px;
-color: #ffffff;
+color: #000000;
 text-align: justify;
 }
 .site-footer p {
- border: 1px solid #000000;
+ border: 1px solid #ffffff;
  padding: 10px 20px;
  border-radius: 10px 0px;
-background-color: #000000;
+background-color: #ffffff;
 cursor: pointer;
 }
 .site-footer p:last-child {
@@ -134,4 +134,26 @@ cursor: auto;
   width: 25px;
   height: 25px;
   cursor: pointer;
+}
+img {
+  box-shadow: 10px 10px 20px black
+}
+#left-arrow, #right-arrow {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#left-arrow, #right-arrow:hover {
+  box-shadow: black;
+}
+#left-arrow, #right-arrow:active{
+  box-shadow: #999999;
 }
