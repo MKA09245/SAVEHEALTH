@@ -10,6 +10,12 @@ const arrayOfHealthWishes = [
  "May your heart stay strong, your mind clear, and your body in perfect harmony.",
  "Here’s to a life filled with good health, love, and endless opportunities for wellness.",
  ]
+ const arrayOfimages = [
+    "1.png",
+    "2.png",
+    "3.png",
+    "4.png",
+ ]
     
     
     document.getElementById('btn_health_wishes').addEventListener('click',() => {
@@ -41,7 +47,7 @@ const arrayOfHealthWishes = [
     })
     
     document.getElementById("btn-buy-tablets").addEventListener("click",() => {
-        countOfPills = 5 
+        countOfPills = 5
         console.log(countOfPills);
         document.getElementById("count-of-tablets").innerText = "💊".repeat(
             countOfPills
@@ -50,7 +56,7 @@ const arrayOfHealthWishes = [
     });
     
     let gallaryImage = 1 
-    document.getElementById("main-image").setAttribute('src',`img/gallary/${gallaryImage}.png`)
+    document.getElementById("main-image").setAttribute('src',`img/gallary/${arrayOfimages[gallaryImage-1]}`)
 
     document.getElementById("right-arrow").addEventListener('click',()=>{
         gallaryImage++
@@ -59,15 +65,16 @@ const arrayOfHealthWishes = [
         if(gallaryImage == 4) gallaryImage = 1;
  
 
-        document.getElementById("main-image").setAttribute('src',`img/gallary/${gallaryImage}.png`)
+        document.getElementById("main-image").setAttribute('src',`img/gallary/${arrayOfimages[gallaryImage-1]}`)
     });
     document.getElementById("left-arrow").addEventListener('click',()=>{
         gallaryImage--
         console.log(gallaryImage)
         
-        if(gallaryImage == 0) gallaryImage = 3;
+        if(gallaryImage == 1) gallaryImage = 4;
         
-        document.getElementById("main-image").setAttribute('src',`img/gallary/${gallaryImage}.png`)
+        document.getElementById("main-image").setAttribute('src',`img/gallary/${arrayOfimages[gallaryImage-1]}`)
     });
 
+    
     
